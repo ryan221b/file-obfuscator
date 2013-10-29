@@ -1,0 +1,21 @@
+# Anjuta project file
+*anjuta*
+
+# Backaup files '~'
+*~
+
+# GNU Build Files
+configure*
+Makefile*
+src/Makefile*
+INSTALL
+THANKS
+NEWS
+COPYING
+ChangeLog
+*.sh
+*m4*
+*cache*
+
+# Additional directories
+po/

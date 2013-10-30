@@ -53,7 +53,7 @@ class BinaryData
 			std::string m_Info;
 		};
 
-		// May throw BinDataExceptions
+		// May throw BinDataErrors
 		void readData(std::string filename, const int &size = 0);
 		void writeData(std::string filename, const int &size = 0);
 

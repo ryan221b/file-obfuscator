@@ -43,7 +43,14 @@ class BinaryData
 		class BinDataError : public std::runtime_error
 		{
 		public:
-			BinDataError(const std::string &msg) : std::runtime_error(msg) {}
+			BinDataError(const std::string &msg, const std::string &err = "")
+			: std::runtime_error(err),
+			  m_Info(msg)
+			{}
+			const std::string &getInfo() const { return m_Info; }
+
+		private:
+			std::string m_Info;
 		};
 
 		// May throw BinDataExceptions

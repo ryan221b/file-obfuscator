@@ -34,9 +34,7 @@ int main(int argc, char *argv[])
 																  argv,
 																  "fileobfs.app");
 
-
 	AppWindow main_window;
-
 
 	return app->run(main_window);
 }

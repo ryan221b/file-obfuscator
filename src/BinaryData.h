@@ -43,19 +43,19 @@ class BinaryData
 		class BinDataError : public std::runtime_error
 		{
 		public:
-			BinDataError(const std::string &msg, const std::string &err = "")
+			BinDataError(const Glib::ustring &msg, const std::string &err = "")
 			: std::runtime_error(err),
 			  m_Info(msg)
 			{}
 			const std::string &getInfo() const { return m_Info; }
 
 		private:
-			std::string m_Info;
+			Glib::ustring m_Info;
 		};
 
 		// May throw BinDataErrors
-		void readData(std::string filename, const int &size = 0);
-		void writeData(std::string filename, const int &size = 0);
+		void readData(const std::string &filename, const int &size = 0);
+		void writeData(const std::string &filename, const int &size = 0);
 
 		byte *getData() const;
 		const int getSize() const;

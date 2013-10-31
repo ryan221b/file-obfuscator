@@ -28,7 +28,7 @@ using namespace std;
  *  May throw BinDataError !
  */
 
-void BinaryData::readData(string filename, const int &size)
+void BinaryData::readData(const string &filename, const int &size)
 {
 	// Open file
 	in_fileHnd.open(filename.c_str(), ios::in|ios::binary|ios::ate);
@@ -57,7 +57,7 @@ void BinaryData::readData(string filename, const int &size)
  *  May throw BinDataError !
  */
 
-void BinaryData::writeData(string filename, const int &size)
+void BinaryData::writeData(const string &filename, const int &size)
 {
 	// Open file
 	out_fileHnd.open(filename.c_str(), ios::out|ios::binary);

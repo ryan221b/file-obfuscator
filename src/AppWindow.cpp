@@ -18,6 +18,17 @@
  */
 
 #include "AppWindow.h"
+#include <iostream>
+
+AppWindow::AppWindow()
+: //TODO: Init list
+{
+	// TODO: Implement ctor.
+}
 
 
+AppWindow::~AppWindow()
+{
+}
 
+// TODO: Write callbacks

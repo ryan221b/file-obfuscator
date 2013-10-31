@@ -19,3 +19,6 @@ ChangeLog
 
 # Additional directories
 po/
+
+# Ignore template ui file
+template.ui

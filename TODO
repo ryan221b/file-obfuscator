@@ -1,4 +1,4 @@
 List of tasks:
 
- * Design and implement GUI
+ * Implement GUI signal callbacks
  * Implement encoding routine inside Button click handler

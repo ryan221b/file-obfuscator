@@ -40,7 +40,7 @@ protected:
 	Gtk::Box m_HBox_File, m_HBox_Key;
 	
 	Gtk::InfoBar m_InfoBar;
-	Gtk::Label   m_Info_Label;
+	Gtk::Label   m_Label_Info;
 
 	Gtk::Label m_Label_File, m_Label_Key;
 	Gtk::Entry m_Entry_File, m_Entry_Key;

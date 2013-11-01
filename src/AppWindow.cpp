@@ -108,4 +108,28 @@ AppWindow::~AppWindow()
 {
 }
 
-// TODO: Write callbacks
+
+// TODO: Write callbacks (dummy for now)
+
+void AppWindow::on_buffer_changed()
+{
+	// TODO: Implement this
+}
+
+
+void AppWidnow::on_infobar_response(int)
+{
+	// TODO: Implement this
+}
+
+
+void AppWindow::on_button_scramble()
+{
+	// TODO: Implement this
+}
+
+
+void AppWindow::on_button_quit()
+{
+	hide();
+}

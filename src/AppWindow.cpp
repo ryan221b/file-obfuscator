@@ -107,6 +107,9 @@ AppWindow::~AppWindow()
 void AppWindow::on_entrys_changed()
 {
 	// TODO: Implement this
+	bool flag = (m_Entry_File.get_text_length())
+		&& (m_Entry_Key.get_text_length());
+	m_Button_Scramble.set_sensitive(flag);
 }
 
 

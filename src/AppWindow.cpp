@@ -124,8 +124,8 @@ void AppWindow::on_button_scramble()
 {
 	// TODO: Implement this
 	BinaryData binData;
-	const std::string fName  = m_Entry_File.get_text();
-	const std::string key = m_Entry_Key.get_text();
+	const std::string fName = m_Entry_File.get_text();
+	const std::string key   = m_Entry_Key.get_text();
 
 	// Read and encrypt file:
 	try

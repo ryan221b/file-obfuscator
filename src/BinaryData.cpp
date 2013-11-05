@@ -36,7 +36,7 @@ void BinaryData::readData(const string &filename, const int &size)
 	// Check if open was succesfull
 	if (!in_fileHnd.is_open())
 	{
-		BinaryData::BinDataError err;
+		BinaryData::BinDataError err("Unable to open "+filename);
 		//err.setInfo("Unable to open "+filename);
 		throw(err);
 	}
@@ -69,7 +69,7 @@ void BinaryData::writeData(const string &filename, const int &size)
 	// Check if open was succesfull
 	if (!out_fileHnd.is_open())
 	{
-		BinaryData::BinDataError err;
+		BinaryData::BinDataError err("Unable to open "+filename);
 		//err.setInfo("Unable to open "+filename);
 		throw(err);
 	}

@@ -22,7 +22,7 @@ missing
 depcomp
 
 # Additional directories:
-# po/
+po/
 
 # Ignore template ui file
 template.ui

@@ -25,8 +25,8 @@ AppWindow::AppWindow()
   m_Label_File("File: "),
   m_Label_Key("Key: "),
   m_ButtonBox(Gtk::ORIENTATION_HORIZONTAL),
-  m_Button_Scramble("_Scramble"),
-  m_Button_Quit("_Quit")
+  m_Button_Scramble("_Scramble", true),
+  m_Button_Quit("_Quit", true)
 {
 	set_title("File Obfuscator");
 	set_border_width(10);

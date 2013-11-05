@@ -44,7 +44,6 @@ protected:
 
 	Gtk::Label m_Label_File, m_Label_Key;
 	Gtk::Entry m_Entry_File, m_Entry_Key;
-	Glib::RefPtr<Gtk::EntryBuffer> m_refFileBuffer, m_refKeyBuffer;
 
 	Gtk::ButtonBox m_ButtonBox;
 	Gtk::Button	   m_Button_Scramble, m_Button_Quit;

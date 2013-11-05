@@ -61,8 +61,8 @@ AppWindow::AppWindow()
 
 	
 	// Setup Key box:
-	m_Entry_Key.signal_chnaged().connect(sigc::mem_fun(*this,
-			&AppWindow::on_entrys_chnaged));
+	m_Entry_Key.signal_changed().connect(sigc::mem_fun(*this,
+			&AppWindow::on_entrys_changed));
 	
 	m_HBox_Key.pack_start(m_Label_Key, Gtk::PACK_SHRINK, 5);
 	m_HBox_Key.pack_end(m_Entry_Key, Gtk::PACK_EXPAND_WIDGET, 5);

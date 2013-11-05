@@ -35,7 +35,11 @@ void BinaryData::readData(const string &filename, const int &size)
 
 	// Check if open was succesfull
 	if (!in_fileHnd.is_open())
-		throw(BinaryData::BinDataError("Unable to open "+filename));
+	{
+		BinaryData::BinDataError err;
+		//err.setInfo("Unable to open "+filename);
+		throw(err);
+	}
 
 	// Allocate size: if size = 0, read entire file
 	d_size = size ? size : int(in_fileHnd.tellg()); 
@@ -64,7 +68,11 @@ void BinaryData::writeData(const string &filename, const int &size)
 	
 	// Check if open was succesfull
 	if (!out_fileHnd.is_open())
-		throw(BinaryData::BinDataError("Unable to open "+filename));
+	{
+		BinaryData::BinDataError err;
+		//err.setInfo("Unable to open "+filename);
+		throw(err);
+	}
 	
 	// If size = 0, write entire data
 	int lsize = size ? size : d_size;

@@ -1,11 +1,12 @@
 # Anjuta project file
 *anjuta*
+Debug/
 
 # Backaup files '~'
 *~
 
 # GNU Build Files
-configure*
+config*
 Makefile*
 src/Makefile*
 INSTALL
@@ -13,9 +14,12 @@ THANKS
 NEWS
 COPYING
 ChangeLog
-*.sh
+*[.-]sh
 *m4*
 *cache*
+in*
+missing
+depcomp
 
 # Additional directories
 po/

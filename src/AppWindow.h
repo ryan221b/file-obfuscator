@@ -20,7 +20,7 @@
 #ifndef _APPWINDOW_H_
 #define _APPWINDOW_H_
 
-#include "gtkmm.h"
+#include <gtkmm.h>
 
 class AppWindow : public Gtk::Window 
 {

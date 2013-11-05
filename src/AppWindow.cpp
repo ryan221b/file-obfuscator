@@ -28,7 +28,6 @@ AppWindow::AppWindow()
   m_Button_Scramble("_Scramble"),
   m_Button_Quit("_Quit")
 {
-	// TODO: Implement ctor.
 	set_title("File Obfuscator");
 	set_border_width(10);
 
@@ -38,7 +37,7 @@ AppWindow::AppWindow()
 	
 	// Setup InfoBar:
 	Gtk::Container *infoBarContainer = 
-		dynamic_cast<Gtk::Container *>(InfoBar.get_content_area());
+		dynamic_cast<Gtk::Container *>(m_InfoBar.get_content_area());
 	
 	if(infoBarContainer)
 		infoBarContainer->add(m_Label_Info);
@@ -72,7 +71,7 @@ AppWindow::AppWindow()
 			&AppWindow::on_buffer_changed));
 
 	m_HBox_Key.pack_start(m_Label_Key, Gtk::PACK_SHRINK, 5);
-	m_Hbox_Key.pack_end(m_Entry_Key, Gtk::PACK_EXPAND_WIDGET, 5);
+	m_HBox_Key.pack_end(m_Entry_Key, Gtk::PACK_EXPAND_WIDGET, 5);
 
 	m_VBox_Top.pack_start(m_HBox_Key, Gtk::PACK_EXPAND_PADDING, 5);
 
@@ -117,7 +116,7 @@ void AppWindow::on_buffer_changed()
 }
 
 
-void AppWidnow::on_infobar_response(int)
+void AppWindow::on_infobar_response(int)
 {
 	// TODO: Implement this
 }

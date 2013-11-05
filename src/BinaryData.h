@@ -21,6 +21,7 @@
 #include <string>
 #include <fstream>
 #include <stdexcept>
+#include <glibmm/ustring.h>
 
 #ifndef BINARYDATA_H
 #define BINARYDATA_H
@@ -43,14 +44,16 @@ class BinaryData
 		class BinDataError : public std::runtime_error
 		{
 		public:
-			BinDataError(const Glib::ustring &msg, const std::string &err = "")
-			: std::runtime_error(err),
-			  m_Info(msg)
+			BinDataError(const std::string &err = "")
+			: runtime_error(err)
 			{}
-			const std::string &getInfo() const { return m_Info; }
+
+		/*	void setInfo(const Glib::ustring &msg) { m_Info = msg; }
+			const Glib::ustring &getInfo() const { return m_Info; }
 
 		private:
 			Glib::ustring m_Info;
+		*/
 		};
 
 		// May throw BinDataErrors

@@ -103,11 +103,9 @@ AppWindow::~AppWindow()
 }
 
 
-// TODO: Write callbacks (dummy for now)
-
 void AppWindow::on_entrys_changed()
 {
-	// TODO: Implement this
+
 	bool flag = (m_Entry_File.get_text_length())
 		&& (m_Entry_Key.get_text_length());
 	m_Button_Scramble.set_sensitive(flag);
@@ -116,13 +114,13 @@ void AppWindow::on_entrys_changed()
 
 void AppWindow::on_infobar_response(int)
 {
-	// TODO: Implement this
+	m_Label_Info.set_text("");
+	m_InfoBar.hide();
 }
 
 
 void AppWindow::on_button_scramble()
 {
-	// TODO: Implement this
 	BinaryData binData;
 	const std::string fName = m_Entry_File.get_text();
 	const std::string key   = m_Entry_Key.get_text();

@@ -1,4 +1,5 @@
 List of tasks:
 
- * Implement GUI signal callbacks
- * Implement encoding routine inside Button click handler
+ * Add file browsing button / combo box action
+ * Create an operator[] for BinaryData
+ * Look into fixing the ChangeLog

@@ -21,8 +21,8 @@ in*
 missing
 depcomp
 
-# Additional directories
-po/
+# Additional directories:
+# po/
 
 # Ignore template ui file
 template.ui

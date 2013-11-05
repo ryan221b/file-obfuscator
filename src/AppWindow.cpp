@@ -54,12 +54,12 @@ AppWindow::AppWindow()
 	m_refFileBuffer = Gtk::EntryBuffer::create();
 	m_Entry_File.set_buffer(m_refFileBuffer);
 	
-	/* FIXME	
+	/* FIXME
 	m_refFileBuffer->signal_inserted_text().connect(sigc::mem_fun(*this,
 			&AppWindow::on_buffer_changed));
+	*/
 	m_refFileBuffer->signal_deleted_text().connect(sigc::mem_fun(*this,
 			&AppWindow::on_buffer_changed));
-	*/
 
 	m_HBox_File.pack_start(m_Label_File, Gtk::PACK_SHRINK, 5);
 	m_HBox_File.pack_end(m_Entry_File, Gtk::PACK_EXPAND_WIDGET, 5);
@@ -74,9 +74,9 @@ AppWindow::AppWindow()
 	/* FIXME
 	m_refKeyBuffer->signal_inserted_text().connect(sigc::mem_fun(*this,
 			&AppWindow::on_buffer_changed));
+	*/
 	m_refKeyBuffer->signal_deleted_text().connect(sigc::mem_fun(*this,
 			&AppWindow::on_buffer_changed));
-	*/
 
 	m_HBox_Key.pack_start(m_Label_Key, Gtk::PACK_SHRINK, 5);
 	m_HBox_Key.pack_end(m_Entry_Key, Gtk::PACK_EXPAND_WIDGET, 5);
@@ -118,7 +118,7 @@ AppWindow::~AppWindow()
 
 // TODO: Write callbacks (dummy for now)
 
-void AppWindow::on_buffer_changed()
+void AppWindow::on_buffer_changed(guint, guint)
 {
 	// TODO: Implement this
 }

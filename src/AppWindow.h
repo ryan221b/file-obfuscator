@@ -32,7 +32,7 @@ protected:
 	// Signal handlers:
 	void on_button_scramble();
 	void on_button_quit();
-	void on_buffer_changed(guint, guint);
+	void on_entrys_changed();
 	void on_infobar_response(int);
 	
 	// Child widgets:

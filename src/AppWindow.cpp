@@ -118,7 +118,7 @@ AppWindow::~AppWindow()
 
 // TODO: Write callbacks (dummy for now)
 
-void AppWindow::on_buffer_changed(guint, guint)
+void AppWindow::on_entrys_changed()
 {
 	// TODO: Implement this
 }

@@ -163,7 +163,7 @@ void AppWindow::on_button_scramble()
 	}
 
 	// All fine:
-	m_Label_Info.set_text(fName + " written successfully!");
+	m_Label_Info.set_text(fName + ".obf written successfully!");
 	m_InfoBar.set_message_type(Gtk::MESSAGE_INFO);
 	m_InfoBar.show();
 }

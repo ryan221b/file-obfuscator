@@ -18,7 +18,7 @@
  */
 
 #include "BinaryData.h"
-
+#include <cassert>
 using namespace std;
 
 /* readData():
@@ -27,7 +27,6 @@ using namespace std;
  * 
  *  May throw BinDataError !
  */
-
 void BinaryData::readData(const string &filename, const int &size)
 {
 	// Open file
@@ -60,7 +59,6 @@ void BinaryData::readData(const string &filename, const int &size)
  * 
  *  May throw BinDataError !
  */
-
 void BinaryData::writeData(const string &filename, const int &size)
 {
 	// Open file
@@ -86,7 +84,6 @@ void BinaryData::writeData(const string &filename, const int &size)
 /* getData():
  *	Returns pointer to 'data'
  */
-
 byte *BinaryData::getData() const
 {
 	return data;
@@ -105,7 +102,6 @@ byte &operator [](int i)
 /* getSize():
  *	Returns size of 'data'
  */
-
 const int BinaryData::getSize() const
 {
 	return d_size;

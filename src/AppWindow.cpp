@@ -21,6 +21,9 @@
 #include "BinaryData.h"
 #include <iostream>
 
+/* AppWindow():
+ *  GUI constructor
+ */
 AppWindow::AppWindow()
 : m_VBox_Top(Gtk::ORIENTATION_VERTICAL, 10),
   m_Label_File("File: "),
@@ -100,11 +103,19 @@ AppWindow::AppWindow()
 }
 
 
+/* ~AppWindow():
+ *  GUI destructor
+ */
 AppWindow::~AppWindow()
 {
 }
 
 
+/* on_entrys_changed():
+ *  Detect changes to Gtk::Entry widgets and
+ *  activate/deactivate 'Scramble' button
+ *  when any/both of them are empty
+ */
 void AppWindow::on_entrys_changed()
 {
 
@@ -114,6 +125,10 @@ void AppWindow::on_entrys_changed()
 }
 
 
+/* on_infobar_response():
+ *  Erase InfoBar label's text and hide
+ *  the InfoBar widget when 'OK' is clicked
+ */
 void AppWindow::on_infobar_response(int)
 {
 	m_Label_Info.set_text("");
@@ -121,6 +136,11 @@ void AppWindow::on_infobar_response(int)
 }
 
 
+/* on_button_scramble():
+ *  Apply encoding algorith to file by
+ *  looping through it's contents and
+ *  XORing each byte with a byte in the key
+ */
 void AppWindow::on_button_scramble()
 {
 	BinaryData binData;
@@ -169,6 +189,9 @@ void AppWindow::on_button_scramble()
 }
 
 
+/* on_button_quit():
+ *  Close window and exit application
+ */
 void AppWindow::on_button_quit()
 {
 	hide();

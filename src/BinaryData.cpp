@@ -21,6 +21,7 @@
 #include <cassert>
 using namespace std;
 
+
 /* readData():
  * 	Opens file 'filename', allocates space for 'size' bytes
  *  on heap and reads binary contents into 'data' member.
@@ -89,6 +90,7 @@ byte *BinaryData::getData() const
 	return data;
 }
 
+
 /* operator[]():
  *  Return reference to 'i'th element of
  *  underlying data array
@@ -98,6 +100,7 @@ byte &BinaryData::operator [](int i)
 	assert(i < d_size);
 	return data[i];
 }
+
 
 /* getSize():
  *	Returns size of 'data'

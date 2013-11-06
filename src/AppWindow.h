@@ -46,7 +46,7 @@ protected:
 	Gtk::Entry m_Entry_File, m_Entry_Key;
 
 	Gtk::ButtonBox m_ButtonBox;
-	Gtk::Button	   m_Button_Scramble, m_Button_Quit;
+	Gtk::Button    m_Button_Scramble, m_Button_Quit;
 };
 
 #endif // _APPWINDOW_H_

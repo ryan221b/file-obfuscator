@@ -61,6 +61,7 @@ class BinaryData
 		void writeData(const std::string &filename, const int &size = 0);
 
 		byte *getData() const;
+		byte &operator [](int index);
 		const int getSize() const;
 
 

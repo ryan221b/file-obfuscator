@@ -92,6 +92,15 @@ byte *BinaryData::getData() const
 	return data;
 }
 
+/* operator[]():
+ *  Return reference to 'i'th element of
+ *  underlying data array
+ */
+byte &operator [](int i)
+{
+	assert(i < d_size);
+	return data[i];
+}
 
 /* getSize():
  *	Returns size of 'data'

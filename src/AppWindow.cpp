@@ -156,7 +156,7 @@ void AppWindow::on_button_scramble()
 		for (int b = 0, k = 0; b < binData.getSize(); ++b, ++k)
 		{
 			if (k >= key.size()) k = 0;
-			(binData.getData())[b] ^= (key.c_str())[k];
+			binData[b] ^= (key.c_str())[k];
 		}
 	}
 	catch (const BinaryData::BinDataError &err)

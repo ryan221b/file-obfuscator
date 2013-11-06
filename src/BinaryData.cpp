@@ -93,7 +93,7 @@ byte *BinaryData::getData() const
  *  Return reference to 'i'th element of
  *  underlying data array
  */
-byte &operator [](int i)
+byte &BinaryData::operator [](int i)
 {
 	assert(i < d_size);
 	return data[i];

@@ -1,3 +1,76 @@
+File Obfuscator v0.1
+
+* ABOUT *
+---------
 File Obfuscator is a simple programme that provides a thin layer of protection
 against unwanted users peeking at your files by scrambling their contents
 acoording to a passsword.
+
+
+* INSTALLATION *
+----------------
+Install by the standard GNU Build chain.
+
+Open a terminal in the extracted FileObfuscator-0.1 folder. Now type:
+	./configure
+	make
+	sudo make install
+	
+If you don't have root priviliges, pass the '--prefix=$HOME' (without quotes)
+to the 'configure' script, and run 'make install' without 'sudo':
+	./configure --prefix=$HOME
+	make
+	make install
+	
+
+* UNINSTALLATION *
+------------------
+Open a terminal in the FileObfuscator-0.1 folder and run:
+	make uninstall
+	
+This should remove the programme from your system.
+
+
+* USAGE *
+---------
+Use is quite simple, as the application runs as a Graphical User Interface
+or GUI, for short.
+
+You will be presented with 2 text boxes:
+	- File: Path to the file to encrypt/decrypt
+	- Key: A password to encrypt/decrypt the file
+	
+Click the Scramble button to create an encrypted file (it will only be active
+when both the File and Key entrys have text) with the same name and a '.obf'
+extension. For example:
+
+	Joe Hacker has a 'secret' file on his desktop he wishes to protect from
+	prying eyes, so he runs 'fileobfuscator' and types fills in the form,
+	File: /home/jhacker/Desktop/secret    and    Key: mypass
+	Now he clicks on Scramble and a 'secret.obf' file appears on his desktop.
+	When he wants to retrieve his original file he repeats the process,
+	File: /home/jhacker/Desktop/secret.obf    and    Key: mypass
+	This creates a new file 'secret.obf.obf' just like 'secret'.
+	
+	
+* LICENSE *
+-----------
+This programme is Free Software and is released under the GPLv3 license. You
+have a copy of this license named COPYING in the same directory as this README.
+
+Basically, you are free to
+	* USE the programme however YOU want
+	* GIVE the programme to whoever YOU want
+	* CHANGE the programme to fit YOUR needs
+	* DISTRIBUTE your CHANGES to anyone
+NOTE: A copy of the license (COPYING file) must allways acompany this programme
+to guarantee all users the same rights.
+
+
+* DEVELOPMENT *
+---------------
+Please send any bug reports or suggestions to Ryan Babb <ryan221b@gmail.com>
+
+If you are a programmer and are interested in cotributing to the project,
+I encourage you to do so. The full and latest source code is available on
+GitHub: https://github.com/ryan221b/file-obfuscator

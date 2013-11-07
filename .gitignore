@@ -24,6 +24,9 @@ missing
 depcomp
 libtool
 
+# Tarball
+*.tat.gz
+
 # Additional directories:
 po/
 

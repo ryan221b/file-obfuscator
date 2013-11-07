@@ -22,6 +22,7 @@ to the 'configure' script, and run 'make install' without 'sudo':
 	make
 	make install
 	
+Read the INSTALL file for more details.
 
 * UNINSTALLATION *
 ------------------
@@ -33,7 +34,7 @@ This should remove the programme from your system.
 
 * USAGE *
 ---------
-Use is quite simple, as the application runs as a Graphical User Interface
+Use is quite simple, as the application runs with a Graphical User Interface
 or GUI, for short.
 
 You will be presented with 2 text boxes:
@@ -45,11 +46,11 @@ when both the File and Key entrys have text) with the same name and a '.obf'
 extension. For example:
 
 	Joe Hacker has a 'secret' file on his desktop he wishes to protect from
-	prying eyes, so he runs 'fileobfuscator' and types fills in the form,
-	File: /home/jhacker/Desktop/secret    and    Key: mypass
+	prying eyes, so he runs 'fileobfuscator' and fills in the form,
+	| File: /home/jhacker/Desktop/secret |   and   | Key: mypass |
 	Now he clicks on Scramble and a 'secret.obf' file appears on his desktop.
 	When he wants to retrieve his original file he repeats the process,
-	File: /home/jhacker/Desktop/secret.obf    and    Key: mypass
+	| File: /home/jhacker/Desktop/secret.obf |   and   | Key: mypass |
 	This creates a new file 'secret.obf.obf' just like 'secret'.
 	
 	
@@ -74,3 +75,4 @@ Please send any bug reports or suggestions to Ryan Babb <ryan221b@gmail.com>
 If you are a programmer and are interested in cotributing to the project,
 I encourage you to do so. The full and latest source code is available on
 GitHub: https://github.com/ryan221b/file-obfuscator
+SourceForge: https://sourceforge.net/projects/file-obfuscator/

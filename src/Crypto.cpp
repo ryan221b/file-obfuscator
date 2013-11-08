@@ -24,7 +24,7 @@
  */
 void xor_scramble(const std::string &key,
                   const std::string &fname,
-                  const std::string &fname_out = "")
+                  const std::string &fname_out)
 {
 	BinaryData binData;
 
@@ -39,7 +39,7 @@ void xor_scramble(const std::string &key,
 	}
 
 	// Write data:
-	std::string lfname_out = fname_out ? fname_out : fname + ".obf";
+	std::string lfname_out = (fname_out != "") ? fname_out : fname + ".obf";
 	binData.writeData(lfname_out);
 
 	return;

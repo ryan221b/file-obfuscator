@@ -19,7 +19,7 @@
 
 #include "AppWindow.h"
 #include "Crypto.h"
-#include "BinaryData.h"
+#include "BinaryData.h" 
 #include <iostream>
 
 /* AppWindow():
@@ -146,7 +146,7 @@ void AppWindow::on_button_scramble()
 {
 	try
 	{
-		xor_scramble(m_Entry_Key.get_string(), m_Entry_File.get_string());
+		xor_scramble(m_Entry_Key.get_text(), m_Entry_File.get_text());
 	}
 	catch (const BinaryData::BinDataError &err)
 	{

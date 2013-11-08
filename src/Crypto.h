@@ -28,7 +28,7 @@
  *  Performe bit-wise XOR encryption on a
  *  file acoording to a key
  */
-void xor_scramble(const char *key,
+void xor_scramble(const std::string &key,
                   const std::string &fname,
                   const std::string &fname_out = "");
 

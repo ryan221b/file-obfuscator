@@ -25,7 +25,7 @@ depcomp
 libtool
 
 # Tarball
-*.tat.gz
+*.tar.gz
 
 # Additional directories:
 po/

@@ -1,4 +1,20 @@
 List of tasks:
 
  * Add file browsing button / combo box action
+ * Move XOR scramble to separate function
+ * Modify error handling:
+ 	- In-depth error messages printed to stderr inside functions where they are
+ 	  recieved
+ 	  ' Example: readData() prints file open errors to stderr and throws
+ 	    exceptions with lesss information (possibly only return bool?)
+ 	- Exceptions need only notify enclosing functions for GUI error reporting
+ 	  via InfoBar
+ 	  ' Example: readData() may throw exceptions with a message to be added to
+ 	    the GUI's InfoBar. (If errors are predictable, return bool from
+ 	    function and hard-code messages?)
+ * Add Command Line Interface
+ * Add overwrite original file option (CLI and GUI)
+ * Conform to GNU standards by adding --help and --version command line options
+ * Internationalization / translation
+ * Recognise .obf extensioned file and remove it after un-scrambling
  * Look into fixing the ChangeLog

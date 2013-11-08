@@ -18,6 +18,7 @@
  */
 
 #include "AppWindow.h"
+#include "Crypto.h"
 #include "BinaryData.h"
 #include <iostream>
 
@@ -143,39 +144,12 @@ void AppWindow::on_infobar_response(int)
  */
 void AppWindow::on_button_scramble()
 {
-	BinaryData binData;
-	const std::string fName = m_Entry_File.get_text();
-	const std::string key   = m_Entry_Key.get_text();
-
-	// Read and encrypt file:
 	try
 	{
-		binData.readData(fName);
-
-		// xor loop:
-		for (int b = 0, k = 0; b < binData.getSize(); ++b, ++k)
-		{
-			if (k >= key.size()) k = 0;
-			binData[b] ^= (key.c_str())[k];
-		}
+		xor_scramble(m_Entry_Key.get_string(), m_Entry_File.get_string());
 	}
 	catch (const BinaryData::BinDataError &err)
 	{
-		std::cerr << "[readData] Error: " << err.what() << std::endl;
-		m_Label_Info.set_text(err.what());
-		m_InfoBar.set_message_type(Gtk::MESSAGE_ERROR);
-		m_InfoBar.show();
-		return;
-	}
-
-	// Write encrypted data:
-	try
-	{
-		binData.writeData(fName+".obf");
-	}
-	catch (const BinaryData::BinDataError &err)
-	{
-		std::cerr << "[writeData] Error: " << err.what() << std::endl;
 		m_Label_Info.set_text(err.what());
 		m_InfoBar.set_message_type(Gtk::MESSAGE_ERROR);
 		m_InfoBar.show();

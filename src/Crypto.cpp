@@ -16,6 +16,7 @@
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 #include "Crypto.h"
+#include "BinaryData.h"
 
 /* xor_scrabmle():
  *  Performe bit-wise XOR encryption on a
@@ -25,5 +26,21 @@ void xor_scramble(const char *key,
                   const std::string &fname,
                   const std::string &fname_out = "")
 {
+	BinaryData binData;
 
+	// Read data:
+	binData.readData(fname);
+
+	// xor loop:
+	for (int b = 0, k = 0; b < binData.getSize(); ++b, ++k)
+	{
+		if (k >= key.size()) k = 0;
+		binData[b] ^= key[k];
+	}
+
+	// Write data:
+	std::string lfname_out = fname_out ? fname_out : fname + ".obf";
+	binData.writeData(lfname_out);
+
+	return;
 }

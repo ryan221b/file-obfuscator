@@ -30,6 +30,6 @@
  */
 void xor_scramble(const char *key,
                   const std::string &fname,
-                  const std::string &fname_out = "")
+                  const std::string &fname_out = "");
 
 #endif // CRYPTO_H

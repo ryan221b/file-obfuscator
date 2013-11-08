@@ -1,7 +1,6 @@
 List of tasks:
 
  * Add file browsing button / combo box action
- * Move XOR scramble to separate function
  * Modify error handling:
  	- In-depth error messages printed to stderr inside functions where they are
  	  recieved
